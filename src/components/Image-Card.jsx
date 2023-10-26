@@ -1,6 +1,6 @@
 import React from 'react'
 
-// On onari's branch
+
 const ImageCard = ({images}) => {
   return (
     <div className='image-card'>

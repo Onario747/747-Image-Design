@@ -3,7 +3,7 @@ import './App.css';
 import axios from 'axios';
 
 
-// Componentsdss
+// Components
 import ImageCard from './components/Image-Card';
 import TopBar from './components/Tob-Bar';
 import ResultText from './components/Result-Text';
@@ -50,10 +50,10 @@ function App() {
       const imageResults= data.results;
       setImages(imageResults)
 
-      console.log("this is the data.results",imageResults);
-      console.log(data);
-      console.log(keywordBtn);
-      console.log(inputValue);
+      // console.log("this is the data.results",imageResults);
+      // console.log(data);
+      // console.log(keywordBtn);
+      // console.log(inputValue);
       setTotalPages(data.total_pages)
     } catch (error) {
       console.log(error)
