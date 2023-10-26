@@ -1,5 +1,6 @@
 import React from 'react'
 
+// we dem boys.
 const ImageCard = ({images}) => {
   return (
     <div className='image-card'>

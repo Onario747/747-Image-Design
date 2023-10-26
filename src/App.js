@@ -3,7 +3,7 @@ import './App.css';
 import axios from 'axios';
 
 
-// Components
+// Componentsdss
 import ImageCard from './components/Image-Card';
 import TopBar from './components/Tob-Bar';
 import ResultText from './components/Result-Text';
