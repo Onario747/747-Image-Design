@@ -1,6 +1,6 @@
 import React from 'react'
 
-// manthem be coding for 8hrs
+// On onari's branch
 const ImageCard = ({images}) => {
   return (
     <div className='image-card'>
