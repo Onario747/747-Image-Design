@@ -1,6 +1,6 @@
 import React from 'react'
 
-// we dem boys.
+// manthem be coding for 8hrs
 const ImageCard = ({images}) => {
   return (
     <div className='image-card'>
