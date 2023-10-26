@@ -8,7 +8,6 @@ import ImageCard from './components/Image-Card';
 import TopBar from './components/Tob-Bar';
 import ResultText from './components/Result-Text';
 import PageBtns from './components/Page-Btns';
-import ImageKeywords from './components/Image-Keywords';
 
 // Api resources
 const API_URL = 'https://api.unsplash.com/search/photos'
@@ -19,7 +18,6 @@ const IMAGES_PER_PAGE = 25
 // Main App
 function App() {
   const [inputValue, setInputValue] = useState('cartoon')
-  const [keywordBtn, setKeywordBtn] = useState('')
   const [images, setImages] = useState([])
   const [showResultMsg, setshowResultMsg] = useState(false)
   const [totalPages, setTotalPages] = useState(0)
@@ -40,7 +38,6 @@ function App() {
   useEffect(() => {
     fetchImages()
   }, [page])
-
   
 
  const fetchImages = async () => {
@@ -50,10 +47,6 @@ function App() {
       const imageResults= data.results;
       setImages(imageResults)
 
-      // console.log("this is the data.results",imageResults);
-      // console.log(data);
-      // console.log(keywordBtn);
-      // console.log(inputValue);
       setTotalPages(data.total_pages)
     } catch (error) {
       console.log(error)
@@ -62,7 +55,7 @@ function App() {
 
   const searchImage = () => {
     if(inputValue.length > 0) {
-      fetchImages()
+      fetchImages(inputValue)
     } else {
       console.log('Please Enter Image');
     }
@@ -72,13 +65,13 @@ function App() {
     }
     setPage(1)
   }
+  
+
 
   return (
     <div className="App">
   
       <TopBar setInputValue={setInputValue} searchImage={searchImage} />
-
-      <ImageKeywords setKeywordBtn={setKeywordBtn} />
 
       <ResultText inputValue={inputValue} showResultMsg={showResultMsg} />
 
