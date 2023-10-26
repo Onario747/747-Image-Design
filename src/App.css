@@ -218,7 +218,10 @@ body {
 
 .keyword-btns {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
+  margin: 0 20px;
 }
 
 .keyword-btns button {
